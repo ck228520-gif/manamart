@@ -1,97 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ManaMart Cart</title>
+<title>Cart</title>
 
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background:#f5f5f5;
-            margin:0;
-        }
+<style>
 
-        .header{
-            background:#2e7d32;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
+body{
+font-family:Arial;
+padding:30px;
+background:#f5f5f5;
+}
 
-        .container{
-            width:80%;
-            margin:30px auto;
-            background:white;
-            padding:20px;
-            border-radius:10px;
-        }
+.box{
+background:white;
+padding:20px;
+border-radius:10px;
+max-width:500px;
+margin:auto;
+}
 
-        table{
-            width:100%;
-            border-collapse:collapse;
-        }
+button{
+background:#2e7d32;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
 
-        th, td{
-            border:1px solid #ddd;
-            padding:12px;
-            text-align:center;
-        }
+</style>
 
-        .total{
-            font-size:24px;
-            font-weight:bold;
-            margin-top:20px;
-        }
-
-        .btn{
-            background:#2e7d32;
-            color:white;
-            padding:12px 25px;
-            border:none;
-            border-radius:5px;
-            cursor:pointer;
-            margin-top:20px;
-        }
-    </style>
 </head>
 
 <body>
 
-<div class="header">
-    <h1>ManaMart Cart</h1>
-</div>
+<div class="box">
 
-<div class="container">
+<h2>Your Cart</h2>
 
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </tr>
+<div id="cartItems"></div>
 
-        <tr>
-            <td>Rice</td>
-            <td>2</td>
-            <td>₹120</td>
-        </tr>
+<h3>Total : ₹<span id="total">0</span></h3>
 
-        <tr>
-            <td>Sugar</td>
-            <td>1</td>
-            <td>₹45</td>
-        </tr>
-    </table>
-
-    <div class="total">
-        Total: ₹165
-    </div>
-
-  <button class="btn"
-onclick="window.location.href='checkout.html'">
-Proceed to Checkout
+<button onclick="window.location.href='checkout.html'">
+Proceed To Checkout
 </button>
 
 </div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let total = 0;
+let output = "";
+
+cart.forEach(item=>{
+
+output += "<p>"+item.product+" - ₹"+item.price+"</p>";
+
+total += item.price;
+
+});
+
+document.getElementById("cartItems").innerHTML = output;
+document.getElementById("total").innerText = total;
+
+</script>
 
 </body>
 </html>
