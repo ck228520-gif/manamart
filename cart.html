@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ManaMart Cart</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f5f5f5;
+            margin:0;
+        }
+
+        .header{
+            background:#2e7d32;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .container{
+            width:80%;
+            margin:30px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th, td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:center;
+        }
+
+        .total{
+            font-size:24px;
+            font-weight:bold;
+            margin-top:20px;
+        }
+
+        .btn{
+            background:#2e7d32;
+            color:white;
+            padding:12px 25px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>ManaMart Cart</h1>
+</div>
+
+<div class="container">
+
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>Rice</td>
+            <td>2</td>
+            <td>₹120</td>
+        </tr>
+
+        <tr>
+            <td>Sugar</td>
+            <td>1</td>
+            <td>₹45</td>
+        </tr>
+    </table>
+
+    <div class="total">
+        Total: ₹165
+    </div>
+
+  <button class="btn"
+onclick="window.location.href='checkout.html'">
+Proceed to Checkout
+</button>
+
+</div>
+
+</body>
+</html>
