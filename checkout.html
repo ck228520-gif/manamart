@@ -63,9 +63,87 @@ input, textarea{
 
 <textarea rows="4" placeholder="Delivery Address"></textarea>
 
-<button class="btn" onclick="placeOrder()">
-Place Order
-</button>
+function placeOrder(){
+    window.location.href="payment.html";
+}
+
+</div>
+
+<script>
+function placeOrder(){
+    alert("Order Placed Successfully! Thank You for Shopping with ManaMart.");
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<title>Checkout - ManaMart</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+.header{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.container{
+    width:50%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.btn{
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    width:100%;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+<h1>ManaMart Checkout</h1>
+</div>
+
+<div class="container">
+
+<h2>Customer Details</h2>
+
+<input type="text" placeholder="Full Name">
+
+<input type="tel" placeholder="Mobile Number">
+
+<textarea rows="4" placeholder="Delivery Address"></textarea>
+
+function placeOrder(){
+    window.location.href="payment.html";
+}
 
 </div>
 
